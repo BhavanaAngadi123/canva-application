@@ -58,20 +58,24 @@
     .format-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(28,31,42,.09)}
     .format-icon{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;margin-bottom:13px;color:#1d2030}
     .format-card:nth-child(1) .format-icon{background:#ffb2bd}.format-card:nth-child(2) .format-icon{background:#a8e8df}.format-card:nth-child(3) .format-icon{background:#ffd87e}.format-card:nth-child(4) .format-icon{background:#b8c7ff}.format-card:nth-child(5) .format-icon{background:#c8efa6}.format-card:nth-child(6) .format-icon{background:#ebb8ef}
-    .format-card strong{display:block;font-size:13px}.format-card span{font-size:11px;color:var(--soft)}
+    .format-card:after{content:"";position:absolute;width:78px;height:78px;right:-22px;top:-25px;border-radius:50%;background:color-mix(in srgb,var(--format-accent,var(--accent)) 22%,transparent);box-shadow:-30px 48px 0 -22px color-mix(in srgb,var(--format-accent,var(--accent)) 35%,transparent);pointer-events:none}.format-card:nth-child(1){--format-accent:var(--accent)}.format-card:nth-child(2){--format-accent:var(--accent-2)}.format-card:nth-child(3){--format-accent:var(--accent-3)}.format-card:nth-child(4){--format-accent:var(--accent-4)}.format-card:nth-child(5){--format-accent:#78b956}.format-card:nth-child(6){--format-accent:#bd65c6}
+    .format-card strong{display:block;font-size:13px;position:relative;z-index:1}.format-card span{font-size:11px;color:var(--soft);position:relative;z-index:1}
     .section-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:30px 0 15px}.section-head h2{font-size:20px;margin:0}.section-head button{border:0;background:transparent;color:var(--muted);font-weight:700;cursor:pointer}
     .filter-pills{display:flex;gap:8px;flex-wrap:wrap}.pill{height:34px;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:0 13px;color:var(--muted);cursor:pointer}.pill.active{background:var(--ink);color:var(--panel);border-color:var(--ink)}
     .project-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
     .project-card{border:0;background:transparent;padding:0;text-align:left;color:inherit;cursor:pointer}
     .thumb{aspect-ratio:1.28;border-radius:13px;overflow:hidden;position:relative;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);transition:transform .2s ease,box-shadow .2s ease}
     .project-card:hover .thumb{transform:translateY(-4px);box-shadow:var(--shadow)}
-    .thumb.t1{background:#f7c846}.thumb.t2{background:#1d2848}.thumb.t3{background:#e9d7ff}.thumb.t4{background:#d8f2ee}.thumb.t5{background:#ffded7}.thumb.t6{background:#15171d}
-    .poster-sun{position:absolute;width:100px;height:100px;background:#ef6461;border-radius:50%;right:10%;top:14%}.poster-copy{position:absolute;left:9%;bottom:12%;font-family:"Newsreader";font-weight:600;font-size:clamp(18px,2.3vw,38px);line-height:.85;color:#171922}.poster-mini{position:absolute;left:9%;top:14%;font-size:8px;font-weight:700;letter-spacing:1.5px;color:#171922}
-    .story-ring{position:absolute;border:1px solid rgba(255,255,255,.8);border-radius:50%;width:130px;height:130px;left:50%;top:50%;transform:translate(-50%,-50%)}.story-ring:after{content:"";position:absolute;inset:18px;border:12px solid #ff7186;border-radius:50%;border-right-color:#75e2cd}.story-copy{position:absolute;left:7%;top:9%;color:white;font-size:10px;letter-spacing:2px}
-    .identity-letter{position:absolute;font-family:"Newsreader";font-size:100px;color:#442e57;right:12%;bottom:-25px}.identity-lines{position:absolute;left:9%;top:18%;width:42%;height:50%;background:repeating-linear-gradient(#714b90 0 3px,transparent 3px 14px)}
-    .spatial-orb{position:absolute;width:115px;height:115px;border-radius:50%;left:14%;top:12%;background:radial-gradient(circle at 32% 28%,#fff,#70d6c6 30%,#207a70 70%,#114840);box-shadow:25px 24px 0 rgba(255,255,255,.6)}.spatial-copy{position:absolute;right:7%;bottom:11%;font-size:17px;font-weight:700;color:#173833;text-align:right}
-    .social-shape{position:absolute;inset:12%;background:#fff0eb;border-radius:50% 50% 20% 50%;transform:rotate(-8deg)}.social-copy{position:absolute;left:15%;top:24%;font-family:"Newsreader";font-size:24px;color:#663f38}.social-dot{position:absolute;width:46px;height:46px;border-radius:50%;right:15%;bottom:16%;background:#ff715b}
-    .night-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:26px 26px}.night-copy{position:absolute;color:white;font-size:30px;font-weight:700;left:9%;top:20%;line-height:1}.night-bar{position:absolute;height:7px;width:65%;left:9%;bottom:18%;background:linear-gradient(90deg,#ff6f85 0 38%,#56d6c4 38% 68%,#ffd166 68%)}
+    .thumb.t1{background:#f7c846}.thumb.t2{background:#1d2848}.thumb.t3{background:#e9d7ff}.thumb.t4{background:#d8f2ee}.thumb.t5{background:#ffded7}.thumb.t6{background:#15171d}.thumb.t7{background:#164f45}.thumb.t8{background:#f4eee2}
+    .thumb-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(23,25,34,.11) 1px,transparent 1px),linear-gradient(90deg,rgba(23,25,34,.11) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(90deg,#000,transparent 78%)}
+    .poster-sun{position:absolute;width:100px;height:100px;background:#ef6461;border-radius:50%;right:10%;top:14%;box-shadow:-18px 18px 0 #ffe7a1}.poster-copy{position:absolute;left:9%;bottom:12%;font-family:"Newsreader";font-weight:600;font-size:clamp(18px,2.3vw,38px);line-height:.85;color:#171922}.poster-mini{position:absolute;left:9%;top:14%;font-size:8px;font-weight:700;letter-spacing:1.5px;color:#171922}.poster-date{position:absolute;right:8%;bottom:9%;font-size:8px;font-weight:700;color:#171922;writing-mode:vertical-rl;letter-spacing:1px}.poster-rule{position:absolute;left:9%;right:9%;top:44%;height:1px;background:rgba(23,25,34,.35)}
+    .story-ring{position:absolute;border:1px solid rgba(255,255,255,.8);border-radius:50%;width:130px;height:130px;left:50%;top:50%;transform:translate(-50%,-50%)}.story-ring:after{content:"";position:absolute;inset:18px;border:12px solid #ff7186;border-radius:50%;border-right-color:#75e2cd}.story-ring:before{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:#ffd166;left:-5px;top:32px;box-shadow:96px 68px 0 #fff}.story-copy{position:absolute;left:7%;top:9%;color:white;font-size:10px;letter-spacing:2px}.story-detail{position:absolute;left:7%;right:7%;bottom:8%;color:#fff;display:flex;justify-content:space-between;font-size:7px;letter-spacing:1px;border-top:1px solid rgba(255,255,255,.35);padding-top:7px}
+    .identity-letter{position:absolute;font-family:"Newsreader";font-size:100px;color:#442e57;right:12%;bottom:-25px}.identity-lines{position:absolute;left:9%;top:18%;width:42%;height:50%;background:repeating-linear-gradient(#714b90 0 3px,transparent 3px 14px)}.identity-chip{position:absolute;left:9%;bottom:10%;font-size:8px;font-weight:700;letter-spacing:2px;color:#442e57}.identity-block{position:absolute;width:46px;height:46px;right:12%;top:13%;background:#f7c846;border-radius:50% 50% 10% 50%}
+    .spatial-orb{position:absolute;width:115px;height:115px;border-radius:50%;left:14%;top:12%;background:radial-gradient(circle at 32% 28%,#fff,#70d6c6 30%,#207a70 70%,#114840);box-shadow:25px 24px 0 rgba(255,255,255,.6)}.spatial-copy{position:absolute;right:7%;bottom:11%;font-size:17px;font-weight:700;color:#173833;text-align:right}.spatial-stars{position:absolute;left:10%;bottom:12%;color:#173833;font-size:10px;letter-spacing:12px}.spatial-line{position:absolute;right:7%;top:13%;width:32%;height:28%;border-top:2px solid #173833;border-right:2px solid #173833}
+    .social-shape{position:absolute;inset:12%;background:#fff0eb;border-radius:50% 50% 20% 50%;transform:rotate(-8deg)}.social-copy{position:absolute;left:15%;top:24%;font-family:"Newsreader";font-size:24px;color:#663f38}.social-dot{position:absolute;width:46px;height:46px;border-radius:50%;right:15%;bottom:16%;background:#ff715b;box-shadow:-17px 11px 0 #f7bd3a}.social-tag{position:absolute;right:8%;top:9%;font-size:7px;font-weight:700;color:#663f38;border:1px solid #a66c60;border-radius:99px;padding:4px 7px}
+    .night-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:26px 26px}.night-copy{position:absolute;color:white;font-size:30px;font-weight:700;left:9%;top:20%;line-height:1}.night-bar{position:absolute;height:7px;width:65%;left:9%;bottom:18%;background:linear-gradient(90deg,#ff6f85 0 38%,#56d6c4 38% 68%,#ffd166 68%)}.night-number{position:absolute;right:7%;top:8%;font-family:"Newsreader";font-size:54px;color:rgba(255,255,255,.12)}.night-foot{position:absolute;left:9%;right:9%;bottom:7%;display:flex;justify-content:space-between;color:#fff;font-size:6px;letter-spacing:1px}
+    .garden-flower{position:absolute;width:126px;height:126px;left:9%;top:15%;border-radius:50%;background:conic-gradient(#f7bd3a 0 12.5%,#f47c78 0 25%,#f7bd3a 0 37.5%,#f47c78 0 50%,#f7bd3a 0 62.5%,#f47c78 0 75%,#f7bd3a 0 87.5%,#f47c78 0);transform:rotate(12deg)}.garden-flower:after{content:"";position:absolute;inset:38px;border-radius:50%;background:#164f45}.garden-copy{position:absolute;right:8%;bottom:11%;color:#f8f1df;font-family:"Newsreader";font-size:25px;line-height:.92;text-align:right}.garden-tag{position:absolute;right:8%;top:10%;color:#d8f2c4;font-size:7px;letter-spacing:2px}
+    .editorial-number{position:absolute;right:7%;top:-24px;font-family:"Newsreader";font-size:128px;color:#dfd2be}.editorial-copy{position:absolute;left:9%;top:18%;font-family:"Newsreader";font-size:29px;line-height:.9;color:#2f2b28}.editorial-photo{position:absolute;left:9%;bottom:10%;width:46%;height:32%;background:repeating-linear-gradient(135deg,#d96f58 0 12px,#2f2b28 12px 24px);border-radius:50% 50% 4px 4px}.editorial-tag{position:absolute;right:8%;bottom:10%;font-size:7px;line-height:1.7;color:#655e57;text-align:right}
     .project-meta{display:flex;justify-content:space-between;gap:10px;padding:10px 2px 0}.project-meta strong{font-size:13px}.project-meta span{display:block;color:var(--soft);font-size:11px;margin-top:3px}.kebab{font-size:18px;color:var(--muted)}
     .subview{display:none}.subview.active{display:block}
     .empty-panel{border:1px dashed var(--line);border-radius:18px;min-height:360px;display:grid;place-items:center;text-align:center;padding:40px;background:var(--panel)}.empty-panel h2{margin:12px 0 6px}.empty-panel p{max-width:430px;color:var(--muted);margin:0 0 18px}
@@ -91,7 +95,7 @@
     .panel-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.panel-heading h2{font-size:16px;margin:0}.close-panel{display:none;border:0;background:transparent}
     .panel-search{height:39px;border:1px solid var(--line);border-radius:10px;padding:0 11px;display:flex;align-items:center;gap:8px;margin-bottom:16px}.panel-search input{min-width:0;width:100%;border:0;outline:0;background:transparent;color:var(--ink)}
     .asset-view{display:none}.asset-view.active{display:block}
-    .template-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini-template{aspect-ratio:1;border:0;border-radius:9px;cursor:pointer;position:relative;overflow:hidden;background:#ddd}.mini-template:nth-child(1){background:#f7c846}.mini-template:nth-child(2){background:#1d2848}.mini-template:nth-child(3){background:#e9d7ff}.mini-template:nth-child(4){background:#ffded7}.mini-template b{position:absolute;left:10px;bottom:9px;font-family:"Newsreader";font-size:15px;color:#171922}.mini-template:nth-child(2) b{color:#fff}
+    .template-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini-template{aspect-ratio:1;border:0;border-radius:9px;cursor:pointer;position:relative;overflow:hidden;background:var(--mini-bg,#ddd);box-shadow:inset 0 0 0 1px rgba(0,0,0,.07);transition:transform .16s ease}.mini-template:hover{transform:translateY(-2px)}.mini-template:nth-child(1){--mini-bg:#f7c846;--mini-ink:#171922;--mini-accent:#ef6461}.mini-template:nth-child(2){--mini-bg:#1d2848;--mini-ink:#fff;--mini-accent:#70d6c6}.mini-template:nth-child(3){--mini-bg:#e9d7ff;--mini-ink:#442e57;--mini-accent:#f7c846}.mini-template:nth-child(4){--mini-bg:#ffded7;--mini-ink:#663f38;--mini-accent:#ff715b}.mini-template:nth-child(5){--mini-bg:#d8f2ee;--mini-ink:#173833;--mini-accent:#2ab7a9}.mini-template:nth-child(6){--mini-bg:#164f45;--mini-ink:#fff7df;--mini-accent:#f7bd3a}.mini-template b{position:absolute;left:10px;bottom:9px;font-family:"Newsreader";font-size:15px;line-height:.85;color:var(--mini-ink);text-align:left}.mini-template:before{content:"";position:absolute;width:48px;height:48px;border-radius:50%;right:9px;top:9px;background:var(--mini-accent);box-shadow:-14px 14px 0 color-mix(in srgb,var(--mini-ink) 14%,transparent)}.mini-template:after{content:"";position:absolute;left:10px;right:10px;top:12px;height:1px;background:color-mix(in srgb,var(--mini-ink) 40%,transparent)}
     .panel-label{font-size:11px;font-weight:700;color:var(--muted);margin:18px 0 9px}.elements-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.element-btn{aspect-ratio:1;border:1px solid var(--line);background:var(--panel-2);border-radius:10px;display:grid;place-items:center;cursor:pointer}.shape-preview{width:34px;height:34px;background:var(--accent);border-radius:5px}.shape-preview.circle{border-radius:50%;background:var(--accent-2)}.shape-preview.line{height:4px;background:var(--accent-4)}.shape-preview.star{background:var(--accent-3);clip-path:polygon(50% 0,61% 35%,98% 36%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 36%,39% 35%)}
     .text-add{width:100%;text-align:left;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:14px;margin-bottom:9px;cursor:pointer}.text-add.title{font-family:"Newsreader";font-size:24px}.text-add.sub{font-size:17px;font-weight:700}.text-add.body{font-size:13px;color:var(--muted)}
     .upload-zone{border:1.5px dashed var(--line);border-radius:12px;padding:24px 12px;text-align:center;color:var(--muted);font-size:12px}.upload-zone input{display:none}.upload-zone button{margin-top:12px}
@@ -178,12 +182,14 @@
       </div>
       <div class="section-head"><h2>Starter designs</h2><div class="filter-pills"><button class="pill active" data-filter="all">All</button><button class="pill" data-filter="social">Social</button><button class="pill" data-filter="brand">Brand</button><button class="pill" data-filter="video">Video</button></div></div>
       <div class="project-grid" id="projectGrid">
-        <button class="project-card" data-kind="social" data-template="sun"><div class="thumb t1"><span class="poster-mini">CITY ARTS / 2026</span><span class="poster-sun"></span><span class="poster-copy">Open<br>Studio</span></div><span class="project-meta"><span><strong>Open Studio poster</strong><span>Starter layout</span></span><span class="kebab">···</span></span></button>
-        <button class="project-card" data-kind="video" data-template="night"><div class="thumb t2"><span class="story-copy">AFTER DARK</span><span class="story-ring"></span></div><span class="project-meta"><span><strong>Night stories</strong><span>Starter layout</span></span><span class="kebab">···</span></span></button>
-        <button class="project-card" data-kind="brand" data-template="identity"><div class="thumb t3"><span class="identity-lines"></span><span class="identity-letter">S</span></div><span class="project-meta"><span><strong>Sora identity</strong><span>Starter layout</span></span><span class="kebab">···</span></span></button>
-        <button class="project-card" data-kind="social" data-template="spatial"><div class="thumb t4"><span class="spatial-orb"></span><span class="spatial-copy">future<br>objects</span></div><span class="project-meta"><span><strong>Future objects</strong><span>Starter layout</span></span><span class="kebab">···</span></span></button>
-        <button class="project-card" data-kind="social" data-template="social"><div class="thumb t5"><span class="social-shape"></span><span class="social-copy">made<br>together</span><span class="social-dot"></span></div><span class="project-meta"><span><strong>Community launch</strong><span>Starter layout</span></span><span class="kebab">···</span></span></button>
-        <button class="project-card" data-kind="video" data-template="night"><div class="thumb t6"><span class="night-grid"></span><span class="night-copy">MOVE<br>WITH IT</span><span class="night-bar"></span></div><span class="project-meta"><span><strong>Motion reel</strong><span>Starter layout</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="social" data-template="sun"><div class="thumb t1"><span class="thumb-grid"></span><span class="poster-mini">CITY ARTS / 2026</span><span class="poster-rule"></span><span class="poster-sun"></span><span class="poster-copy">Open<br>Studio</span><span class="poster-date">SAT 08 · 6PM</span></div><span class="project-meta"><span><strong>Open Studio poster</strong><span>Editorial poster</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="video" data-template="night"><div class="thumb t2"><span class="story-copy">AFTER DARK / 04</span><span class="story-ring"></span><span class="story-detail"><span>NEW EPISODE</span><span>WATCH →</span></span></div><span class="project-meta"><span><strong>Night stories</strong><span>Animated cover</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="brand" data-template="identity"><div class="thumb t3"><span class="identity-lines"></span><span class="identity-block"></span><span class="identity-letter">S</span><span class="identity-chip">FORM · FEELING · SYSTEM</span></div><span class="project-meta"><span><strong>Sora identity</strong><span>Brand direction</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="social" data-template="spatial"><div class="thumb t4"><span class="spatial-orb"></span><span class="spatial-line"></span><span class="spatial-stars">✦ ✦ ✦</span><span class="spatial-copy">future<br>objects</span></div><span class="project-meta"><span><strong>Future objects</strong><span>Product announcement</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="social" data-template="social"><div class="thumb t5"><span class="social-shape"></span><span class="social-copy">made<br>together</span><span class="social-dot"></span><span class="social-tag">COMMUNITY / 02</span></div><span class="project-meta"><span><strong>Community launch</strong><span>Social campaign</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="video" data-template="motion"><div class="thumb t6"><span class="night-grid"></span><span class="night-number">03</span><span class="night-copy">MOVE<br>WITH IT</span><span class="night-bar"></span><span class="night-foot"><span>STUDIO SERIES</span><span>00:18</span></span></div><span class="project-meta"><span><strong>Motion reel</strong><span>Video title card</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="brand" data-template="garden"><div class="thumb t7"><span class="garden-flower"></span><span class="garden-tag">BOTANICAL NOTES · Nº12</span><span class="garden-copy">grow<br>slowly</span></div><span class="project-meta"><span><strong>Botanical notes</strong><span>Editorial cover</span></span><span class="kebab">···</span></span></button>
+        <button class="project-card" data-kind="brand" data-template="editorial"><div class="thumb t8"><span class="editorial-number">8</span><span class="editorial-copy">Form<br>&amp; ritual</span><span class="editorial-photo"></span><span class="editorial-tag">ISSUE 08<br>OBJECTS / PEOPLE</span></div><span class="project-meta"><span><strong>Form &amp; ritual</strong><span>Magazine layout</span></span><span class="kebab">···</span></span></button>
       </div>
     </section>
     <section class="page subview" id="view-projects"><div class="welcome"><div><h1>Your projects</h1><p>Everything you create, organized by type.</p></div></div><div class="project-grid" id="projectsClone"></div></section>
@@ -217,7 +223,7 @@
     <aside class="asset-panel" id="assetPanel">
       <div class="panel-heading"><h2 id="assetHeading">Design</h2><button class="close-panel" id="closePanel" aria-label="Close panel">×</button></div>
       <label class="panel-search"><svg class="icon"><use href="#i-search"/></svg><input placeholder="Search this panel"></label>
-      <div class="asset-view active" data-view="design"><div class="template-grid"><button class="mini-template" data-template="sun"><b>Open<br>Studio</b></button><button class="mini-template" data-template="night"><b>After<br>Dark</b></button><button class="mini-template" data-template="identity"><b>Sora</b></button><button class="mini-template" data-template="social"><b>Made<br>Together</b></button></div><div class="panel-label">Canvas color</div><div class="color-row canvas-colors"></div></div>
+      <div class="asset-view active" data-view="design"><div class="template-grid"><button class="mini-template" data-template="sun"><b>Open<br>Studio</b></button><button class="mini-template" data-template="night"><b>After<br>Dark</b></button><button class="mini-template" data-template="identity"><b>Sora<br>System</b></button><button class="mini-template" data-template="social"><b>Made<br>Together</b></button><button class="mini-template" data-template="spatial"><b>Future<br>Objects</b></button><button class="mini-template" data-template="garden"><b>Grow<br>Slowly</b></button></div><div class="panel-label">Canvas color</div><div class="color-row canvas-colors"></div></div>
       <div class="asset-view" data-view="elements"><div class="panel-label">Basic shapes</div><div class="elements-grid"><button class="element-btn" data-shape="rect" aria-label="Add rectangle"><span class="shape-preview"></span></button><button class="element-btn" data-shape="circle" aria-label="Add circle"><span class="shape-preview circle"></span></button><button class="element-btn" data-shape="line" aria-label="Add line"><span class="shape-preview line"></span></button><button class="element-btn" data-shape="star" aria-label="Add star"><span class="shape-preview star"></span></button></div></div>
       <div class="asset-view" data-view="text"><button class="text-add title" data-text="A bold idea">Add a heading</button><button class="text-add sub" data-text="Make it memorable">Add a subheading</button><button class="text-add body" data-text="Add a little detail here.">Add body text</button></div>
       <div class="asset-view" data-view="uploads"><div class="upload-zone"><svg class="icon" style="margin:auto;width:30px;height:30px"><use href="#i-upload"/></svg><p>Drop an image here or choose a file</p><input id="fileInput" type="file" accept="image/png,image/jpeg,image/gif,image/webp"><button class="ghost-btn" id="chooseFile">Choose image</button></div></div>
@@ -251,34 +257,79 @@
   const presets={
     blank:{title:'Untitled design',bg:'#ffffff',objects:[]},
     sun:{title:'Open Studio poster',bg:'#f7c846',objects:[
-      {id:'a',type:'text',text:'CITY ARTS / 2026',x:48,y:64,w:220,size:15,color:'#171922',font:'DM Sans',weight:700,tracking:3},
-      {id:'b',type:'shape',shape:'circle',x:330,y:62,w:150,h:150,color:'#ef6461'},
-      {id:'c',type:'text',text:'Open\nStudio',x:48,y:318,w:380,size:72,color:'#171922',font:'Newsreader',weight:600}
+      {id:'a',type:'text',text:'CITY ARTS / 2026',x:48,y:48,w:260,size:14,color:'#171922',font:'DM Sans',weight:700,tracking:3},
+      {id:'b',type:'shape',shape:'circle',x:326,y:62,w:154,h:154,color:'#ef6461'},
+      {id:'c',type:'shape',shape:'circle',x:302,y:90,w:154,h:154,color:'#ffe7a1'},
+      {id:'d',type:'shape',shape:'line',x:48,y:258,w:444,h:2,color:'#6d5822'},
+      {id:'e',type:'text',text:'Open\nStudio',x:48,y:304,w:380,size:78,color:'#171922',font:'Newsreader',weight:600},
+      {id:'f',type:'text',text:'SAT 08 · 6PM\nRIVER STREET GALLERY',x:395,y:390,w:110,size:12,color:'#171922',font:'DM Sans',weight:700,tracking:1}
     ]},
     night:{title:'Night stories',bg:'#1d2848',objects:[
-      {id:'a',type:'text',text:'AFTER DARK',x:42,y:42,w:240,size:17,color:'#ffffff',font:'DM Sans',weight:700,tracking:4},
-      {id:'b',type:'shape',shape:'circle',x:170,y:146,w:200,h:200,color:'#ff7186',border:'28px solid #70d6c6'},
-      {id:'c',type:'text',text:'Stories in motion',x:42,y:456,w:300,size:26,color:'#ffffff',font:'Newsreader',weight:600}
+      {id:'a',type:'text',text:'AFTER DARK / 04',x:42,y:42,w:260,size:15,color:'#ffffff',font:'DM Sans',weight:700,tracking:4},
+      {id:'b',type:'shape',shape:'circle',x:168,y:132,w:210,h:210,color:'#ff7186'},
+      {id:'c',type:'shape',shape:'circle',x:200,y:164,w:146,h:146,color:'#1d2848',border:'22px solid #70d6c6'},
+      {id:'d',type:'shape',shape:'circle',x:145,y:192,w:18,h:18,color:'#ffd166'},
+      {id:'e',type:'shape',shape:'circle',x:380,y:310,w:12,h:12,color:'#ffffff'},
+      {id:'f',type:'shape',shape:'line',x:42,y:442,w:456,h:1,color:'#8791aa'},
+      {id:'g',type:'text',text:'Stories in motion',x:42,y:458,w:280,size:26,color:'#ffffff',font:'Newsreader',weight:600},
+      {id:'h',type:'text',text:'NEW EPISODE  →',x:360,y:470,w:140,size:11,color:'#ffffff',font:'DM Sans',weight:700,tracking:1}
     ]},
     identity:{title:'Sora identity',bg:'#e9d7ff',objects:[
-      {id:'a',type:'text',text:'SORA',x:46,y:48,w:230,size:18,color:'#442e57',font:'DM Sans',weight:700,tracking:6},
-      {id:'b',type:'text',text:'S',x:265,y:150,w:240,size:230,color:'#442e57',font:'Newsreader',weight:600},
-      {id:'c',type:'shape',shape:'rect',x:50,y:160,w:140,h:8,color:'#714b90'},
-      {id:'d',type:'text',text:'a softer kind\nof structure',x:48,y:344,w:220,size:32,color:'#442e57',font:'Newsreader',weight:600}
+      {id:'a',type:'text',text:'SORA',x:46,y:42,w:230,size:18,color:'#442e57',font:'DM Sans',weight:700,tracking:6},
+      {id:'b',type:'shape',shape:'circle',x:416,y:42,w:58,h:58,color:'#f7c846'},
+      {id:'c',type:'text',text:'S',x:270,y:122,w:240,size:244,color:'#442e57',font:'Newsreader',weight:600},
+      {id:'d',type:'shape',shape:'line',x:48,y:156,w:145,h:8,color:'#714b90'},
+      {id:'e',type:'shape',shape:'line',x:48,y:184,w:110,h:8,color:'#714b90'},
+      {id:'f',type:'shape',shape:'line',x:48,y:212,w:130,h:8,color:'#714b90'},
+      {id:'g',type:'text',text:'a softer kind\nof structure',x:48,y:344,w:240,size:34,color:'#442e57',font:'Newsreader',weight:600},
+      {id:'h',type:'text',text:'FORM · FEELING · SYSTEM',x:48,y:474,w:280,size:11,color:'#442e57',font:'DM Sans',weight:700,tracking:2}
     ]},
     spatial:{title:'Future objects',bg:'#d8f2ee',objects:[
       {id:'a',type:'shape',shape:'circle',x:62,y:72,w:210,h:210,color:'#2ab7a9'},
-      {id:'b',type:'shape',shape:'circle',x:118,y:122,w:190,h:190,color:'#ffffff'},
-      {id:'c',type:'text',text:'future\nobjects',x:292,y:350,w:210,size:46,color:'#173833',font:'DM Sans',weight:700}
+      {id:'b',type:'shape',shape:'circle',x:112,y:120,w:190,h:190,color:'#ffffff'},
+      {id:'c',type:'shape',shape:'circle',x:104,y:104,w:54,h:54,color:'#8be2d6'},
+      {id:'d',type:'shape',shape:'line',x:350,y:62,w:128,h:3,color:'#173833'},
+      {id:'e',type:'shape',shape:'line',x:475,y:62,w:3,h:110,color:'#173833'},
+      {id:'f',type:'text',text:'future\nobjects',x:292,y:344,w:220,size:48,color:'#173833',font:'DM Sans',weight:700},
+      {id:'g',type:'text',text:'MATERIAL STUDIES · 2026',x:62,y:474,w:240,size:11,color:'#173833',font:'DM Sans',weight:700,tracking:2}
     ]},
     social:{title:'Community launch',bg:'#ffded7',objects:[
-      {id:'a',type:'shape',shape:'circle',x:62,y:70,w:315,h:315,color:'#fff0eb'},
-      {id:'b',type:'text',text:'made\ntogether',x:88,y:142,w:320,size:56,color:'#663f38',font:'Newsreader',weight:600},
-      {id:'c',type:'shape',shape:'circle',x:382,y:378,w:82,h:82,color:'#ff715b'}
+      {id:'a',type:'shape',shape:'circle',x:58,y:66,w:330,h:330,color:'#fff0eb'},
+      {id:'b',type:'text',text:'made\ntogether',x:88,y:142,w:320,size:58,color:'#663f38',font:'Newsreader',weight:600},
+      {id:'c',type:'shape',shape:'circle',x:376,y:376,w:84,h:84,color:'#ff715b'},
+      {id:'d',type:'shape',shape:'circle',x:350,y:405,w:54,h:54,color:'#f7bd3a'},
+      {id:'e',type:'text',text:'COMMUNITY / 02',x:360,y:48,w:140,size:10,color:'#663f38',font:'DM Sans',weight:700,tracking:2},
+      {id:'f',type:'text',text:'Ideas grow when they move between us.',x:88,y:350,w:250,size:14,color:'#663f38',font:'DM Sans',weight:500}
+    ]},
+    motion:{title:'Motion reel',bg:'#15171d',objects:[
+      {id:'a',type:'text',text:'03',x:375,y:8,w:150,size:130,color:'#2b2e36',font:'Newsreader',weight:600},
+      {id:'b',type:'text',text:'MOVE\nWITH IT',x:48,y:120,w:360,size:68,color:'#ffffff',font:'DM Sans',weight:700},
+      {id:'c',type:'shape',shape:'line',x:48,y:344,w:170,h:12,color:'#ff6f85'},
+      {id:'d',type:'shape',shape:'line',x:218,y:344,w:130,h:12,color:'#56d6c4'},
+      {id:'e',type:'shape',shape:'line',x:348,y:344,w:142,h:12,color:'#ffd166'},
+      {id:'f',type:'text',text:'STUDIO SERIES',x:48,y:468,w:180,size:12,color:'#ffffff',font:'DM Sans',weight:700,tracking:2},
+      {id:'g',type:'text',text:'00:18',x:438,y:468,w:60,size:12,color:'#ffffff',font:'DM Sans',weight:700}
+    ]},
+    garden:{title:'Botanical notes',bg:'#164f45',objects:[
+      {id:'a',type:'shape',shape:'circle',x:50,y:74,w:236,h:236,color:'#f47c78'},
+      {id:'b',type:'shape',shape:'circle',x:100,y:48,w:236,h:236,color:'#f7bd3a'},
+      {id:'c',type:'shape',shape:'circle',x:126,y:100,w:122,h:122,color:'#164f45'},
+      {id:'d',type:'text',text:'BOTANICAL NOTES · Nº12',x:315,y:52,w:190,size:11,color:'#d8f2c4',font:'DM Sans',weight:700,tracking:2},
+      {id:'e',type:'text',text:'grow\nslowly',x:278,y:330,w:230,size:55,color:'#fff7df',font:'Newsreader',weight:600},
+      {id:'f',type:'shape',shape:'line',x:48,y:468,w:180,h:2,color:'#d8f2c4'},
+      {id:'g',type:'text',text:'FIELD JOURNAL / SPRING',x:48,y:482,w:210,size:10,color:'#d8f2c4',font:'DM Sans',weight:700,tracking:1}
+    ]},
+    editorial:{title:'Form & ritual',bg:'#f4eee2',objects:[
+      {id:'a',type:'text',text:'8',x:360,y:-38,w:180,size:190,color:'#dfd2be',font:'Newsreader',weight:600},
+      {id:'b',type:'text',text:'Form\n& ritual',x:48,y:82,w:260,size:58,color:'#2f2b28',font:'Newsreader',weight:600},
+      {id:'c',type:'shape',shape:'rect',x:48,y:290,w:240,h:164,color:'#d96f58'},
+      {id:'d',type:'shape',shape:'rect',x:76,y:318,w:240,h:164,color:'#2f2b28'},
+      {id:'e',type:'text',text:'ISSUE 08\nOBJECTS / PEOPLE\nAUTUMN 2026',x:368,y:376,w:130,size:12,color:'#655e57',font:'DM Sans',weight:700,tracking:1},
+      {id:'f',type:'shape',shape:'line',x:368,y:350,w:126,h:2,color:'#655e57'}
     ]},
     poster:null,story:null,presentation:null,video:null
   };
-  presets.poster=presets.sun;presets.story=presets.night;presets.presentation=presets.identity;presets.video=presets.night;
+  presets.poster=presets.sun;presets.story=presets.night;presets.presentation=presets.identity;presets.video=presets.motion;
 
   function uid(){return 'o'+Date.now().toString(36)+Math.random().toString(36).slice(2,6)}
   function clone(v){return JSON.parse(JSON.stringify(v))}
